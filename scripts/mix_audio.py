@@ -3,13 +3,14 @@ import librosa
 import numpy as np
 import soundfile as sf
  
-AUDIO_DIR = "../data/audio/"
+AUDIO_DIR = "./data/audio/"
 SAMPLE_RATE = 44100
+#SAMPLE_RATE = 22050
 
-def create_instrument_files(instrument, sample_rate = SAMPLE_RATE):
+def create_instrument_files(instrument, signal_level_list, sample_rate = SAMPLE_RATE):
     list = []
-    instrument_path = os.path.join(AUDIO_DIR, "original", instrument)
-    convert_path = os.path.join(AUDIO_DIR, instrument)
+    instrument_path = os.path.join(AUDIO_DIR, "instrument", instrument)
+    convert_path = os.path.join(AUDIO_DIR, "train", instrument)
 
     if not os.path.exists(convert_path):
         os.makedirs(convert_path)
@@ -20,10 +21,10 @@ def create_instrument_files(instrument, sample_rate = SAMPLE_RATE):
                 # read the audio signal
                 input_file = os.path.join(instrument_path, f)
                 signal, sr = librosa.load(input_file, sr = sample_rate)
-                print("- Processing input file {}.".format(input_file))
+                print("- processing input file {}.".format(input_file))
                 signal_max = max(signal)
                 signal_10 = signal / signal_max
-                for i in range(6, 11):
+                for i in signal_level_list:
                     c_convert_path_signal_level = os.path.join(convert_path, str(i))
                     if not os.path.exists(c_convert_path_signal_level):
                         os.makedirs(c_convert_path_signal_level)
@@ -31,15 +32,15 @@ def create_instrument_files(instrument, sample_rate = SAMPLE_RATE):
 
                     output_signal = signal_10 * 0.1 * i
                     sf.write(output_file, output_signal, sr)
-                    print ("    - Creating output file {}.".format(output_file))
+                    print ("    - creating output file {}.".format(output_file))
 
 
 def create_mix_files(t_instrument, c_instruments, sample_rate = SAMPLE_RATE, t_signal_level = 10, c_signal_level = 10): 
-    t_instrument_path = os.path.join(AUDIO_DIR, t_instrument)
+    t_instrument_path = os.path.join(AUDIO_DIR, 'train', t_instrument)
     
     # dirs=directory
     for c_instrument in c_instruments:
-        c_instrument_path = os.path.join(AUDIO_DIR, c_instrument)
+        c_instrument_path = os.path.join(AUDIO_DIR, 'train', c_instrument)
 
         f_target_signal = []
         f_mix_signal = []
@@ -67,11 +68,11 @@ def create_mix_files(t_instrument, c_instruments, sample_rate = SAMPLE_RATE, t_s
                         m_signal = t_signal + c_signal
                         mix_file = 'mix_' + str(t_signal_level) + '_' + t_token + '_' + str(c_signal_level) + '_' + c_token + '.wav'
                         mix_file_path = os.path.join(t_input_path, mix_file)
-                        print('- Creating {}.'. format(mix_file_path))
+                        print('- creating {}.'. format(mix_file_path))
                         sf.write(mix_file_path, m_signal, sample_rate)    
 
 if __name__ == "__main__":
-    create_instrument_files('piano')
-    create_instrument_files('violin')
+    create_instrument_files('piano', [10])
+    create_instrument_files('violin', [10])
     create_mix_files('piano', ['violin'])
                     
