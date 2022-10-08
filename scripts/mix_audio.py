@@ -3,76 +3,71 @@ import librosa
 import numpy as np
 import soundfile as sf
  
-AUDIO_DIR = "./data/audio/"
 SAMPLE_RATE = 44100
-#SAMPLE_RATE = 22050
+DURATION = 60 # 60 seconds
 
-def create_instrument_files(instrument, signal_level_list, sample_rate = SAMPLE_RATE):
+def normalise(array, max=1, min=0):
+    norm_array = (array - array.min()) / (array.max() - array.min())
+    norm_array = norm_array * (max - min) + min
+    return norm_array
+
+def create_instrument_files(audio_files_dir, signal_files_dir, sample_rate=SAMPLE_RATE, duration=DURATION) :
     list = []
-    instrument_path = os.path.join(AUDIO_DIR, "instrument", instrument)
-    convert_path = os.path.join(AUDIO_DIR, "train", instrument)
-
-    if not os.path.exists(convert_path):
-        os.makedirs(convert_path)
-
-    for (root, dirs, files) in os.walk(instrument_path):
+    for root, _, files in os.walk(audio_files_dir):
         for f in files:
-            if '.wav' in f:
-                # read the audio signal
-                input_file = os.path.join(instrument_path, f)
-                signal, sr = librosa.load(input_file, sr = sample_rate)
-                print("- processing input file {}.".format(input_file))
-                signal_max = max(signal)
-                signal_10 = signal / signal_max
-                for i in signal_level_list:
-                    c_convert_path_signal_level = os.path.join(convert_path, str(i))
-                    if not os.path.exists(c_convert_path_signal_level):
-                        os.makedirs(c_convert_path_signal_level)
-                    output_file = os.path.join(c_convert_path_signal_level, f)
+            # read the audio signal
+            input_file = os.path.join(audio_files_dir, f)
+            output_file = os.path.join(signal_files_dir, f)
+            print(f"- processing input file {input_file}.")
+            signal = librosa.load(input_file, sr=sample_rate, duration=duration, mono=True)[0]
+            norm_signal = normalise(signal)
+            sf.write(output_file, norm_signal, sample_rate)
 
-                    output_signal = signal_10 * 0.1 * i
-                    sf.write(output_file, output_signal, sr)
-                    print ("    - creating output file {}.".format(output_file))
+def create_mix_files(audio_files_dir, inst1, inst2, sample_rate=SAMPLE_RATE, duration=DURATION) :
+    instruments = []
+    instruments.append(inst1)
+    instruments.append(inst2)
 
-
-def create_mix_files(t_instrument, c_instruments, sample_rate = SAMPLE_RATE, t_signal_level = 10, c_signal_level = 10): 
-    t_instrument_path = os.path.join(AUDIO_DIR, 'train', t_instrument)
-    
-    # dirs=directory
-    for c_instrument in c_instruments:
-        c_instrument_path = os.path.join(AUDIO_DIR, 'train', c_instrument)
-
-        f_target_signal = []
-        f_mix_signal = []
-
-        t_input_path = os.path.join(t_instrument_path, str(t_signal_level))
-        
-        for (troot, tdirs, tfile) in os.walk(t_input_path):
-            for tf in tfile:
-                if "mix" in tf:
+    instrument_file_list = []
+    for instrument in instruments:
+        file_list = []
+        for root, _, files in os.walk(audio_files_dir):
+            for file in files:
+                if "mix" in file:
                     continue
-            
-                t_token = tf.split('.')[0]
-                t_file_path = os.path.join(t_instrument_path, str(t_signal_level) , tf)
-                t_signal, sr = librosa.load(t_file_path, sr = sample_rate)
+                if instrument in file:
+                    file_list.append(file)
+        instrument_file_list.append(file_list)
 
-                c_file_dir_path = os.path.join(c_instrument_path, str(c_signal_level))
-                for (croot, cdirs, cfile) in os.walk(c_file_dir_path):
-                    for cf in cfile:
-                        if "mix" in cf:
-                            continue
-
-                        c_token = cf.split('.')[0]
-                        c_file_path = os.path.join(c_file_dir_path, cf)
-                        c_signal, sr = librosa.load(c_file_path, sr = sample_rate)
-                        m_signal = t_signal + c_signal
-                        mix_file = 'mix_' + str(t_signal_level) + '_' + t_token + '_' + str(c_signal_level) + '_' + c_token + '.wav'
-                        mix_file_path = os.path.join(t_input_path, mix_file)
-                        print('- creating {}.'. format(mix_file_path))
-                        sf.write(mix_file_path, m_signal, sample_rate)    
+    for x in instrument_file_list[0]:
+        x_path = os.path.join(audio_files_dir, x)
+        x_signal = librosa.load(x_path, sr=sample_rate, duration=duration, mono=True)[0]
+        x_name= x.split('.')[0]
+        for y in instrument_file_list[1]:
+            y_path = os.path.join(audio_files_dir, y)
+            y_signal = librosa.load(y_path, sr=sample_rate, duration=duration, mono=True)[0]
+            y_name = y.split('.')[0]
+            mix_file_name = "mix_" + x_name + "_" + y_name + ".wav"
+            norm_signal = normalise(x_signal + y_signal)
+            mix_file_path = os.path.join(audio_files_dir, mix_file_name)
+            print(f"- processing input file {mix_file_path}")
+            sf.write(mix_file_path, norm_signal, sample_rate)     
 
 if __name__ == "__main__":
-    create_instrument_files('piano', [10])
-    create_instrument_files('violin', [10])
-    create_mix_files('piano', ['violin'])
+    DATASET_DIR = "./data/fnn_run"
+    SIGNAL_SAVE_DIR = os.path.join(DATASET_DIR, "audio")
+    INSTRUMENT_DIR = "./data/audio/instrument/"
+
+    if not os.path.exists(DATASET_DIR):
+        os.makedirs(DATASET_DIR)
+
+    if not os.path.exists(SIGNAL_SAVE_DIR):
+        os.makedirs(SIGNAL_SAVE_DIR)
+
+    instruments = ["piano", "violin"]
+    for instrument in instruments:
+        instrument_path = os.path.join(INSTRUMENT_DIR, instrument)
+        create_instrument_files(instrument_path, SIGNAL_SAVE_DIR, sample_rate=SAMPLE_RATE, duration=DURATION)
+
+    create_mix_files(SIGNAL_SAVE_DIR, "piano", "violin", sample_rate=SAMPLE_RATE)
                     
