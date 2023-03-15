@@ -1,0 +1,428 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<!-- saved from url=(0024)http://www.roland.co.jp/ -->
+<HTML lang="fr">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>README_FR - Pilote Roland RD Ver.1.0.0 pour Windows&reg; 10</TITLE>
+<STYLE type="text/css">
+<!--
+BODY	{background-color: #FFFFFF;	color: #000000;}
+DL	{margin-left: 15pt;}
+DT	{font-weight: bold;	margin-bottom: 5pt;}
+DT.FN	{font-weight: normal;	margin-bottom: 0pt;}
+DD.FS	{font-size: smaller;}
+OL.FS	{font-size: smaller;}
+LI.OL	{margin-bottom: 15pt;}
+TABLE	{margin-top: 3pt;	margin-bottom: 5pt;}
+TD	{vertical-align: top;	font-size: smaller;}
+TH	{vertical-align: middle;	font-size: smaller;}
+H3	{color: #000080;}
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<H2>Pilote Roland RD Ver.1.0.0 pour Windows&reg; 10</H2>
+
+<P><FONT size="-1">(Remarque)<BR>
+Roland Corporation (« Roland ») ne peut en aucun cas être tenu responsable, vis-à-vis des utilisateurs finaux, de quelque dommage que ce soit, incluant, mais sans s'y limiter, les préjudices financiers occasionnés par la perte de bénéfices commerciaux ou la perte de données commerciales résultant de l'exploitation de ce produit ou de l'impossibilité d'utiliser celui-ci. La disposition présente s'applique même dans le cas où Roland a été informé de l'éventualité de tels dommages.
+</FONT></P>
+
+<TABLE><TR><TD>*</TD><TD>Toute modification, duplication, distribution ou reproduction des supports (y compris les fichiers se rapportant à ce pilote) sans l'autorisation de Roland Corporation (« Roland ») est interdite.</TD></TR></TABLE>
+
+<TABLE cellspacing="0">
+	<TR><TD>*</TD><TD>	Microsoft et Windows sont des marques déposées de Microsoft Corporation.</TD></TR>
+	<TR><TD>*</TD><TD>Tous les noms de produits mentionnés dans le présent document sont des marques ou des marques déposées appartenant à leurs propriétaires respectifs.</TD></TR>
+</TABLE>
+
+
+<HR>
+
+
+<H2><A name="anchor0000">Pilote pour Windows 10</A></H2>
+
+<P>
+<font color=red><strong><u>Votre ordinateur télécharge automatiquement le pilote Windows&reg; 10 pour l'appareil Roland RD depuis Internet lorsque l'appareil Roland RD est connecté à l'ordinateur.</u></strong></font><BR>
+
+
+
+	
+	
+
+<TABLE><TR><TD>*</TD><TD>Si vous utilisez un ordinateur compatible avec la fonction tactile, remplacez les mots &quot;cliquez&quot; et &quot;faites un clic droit&quot; dans ce document par &quot;appuyez&quot; et &quot;exercez une pression prolongée&quot;, respectivement.</TD></TR></TABLE>
+</P>
+
+<H3><A name="anchor0030">Configuration système requise</A></H3>
+
+
+<DL>
+  <DT>Système d'exploitation</DT>
+
+    <DD>Microsoft&reg; Windows&reg; 10 (Édition 64 bits/Édition 32 bits) 
+    <TABLE><TR><TD>*</TD><TD>Windows 10 Mobile n'est pas pris en charge.</TD></TR></TABLE>
+    </DD>
+
+  <DT>Ordinateur</DT>
+    <DD>PC compatible Windows avec port USB
+      <TABLE>
+        <TR><TD>*</TD><TD>Ce produit ne peut pas être utilisé avec un port USB 3.0 qui n’est pas compatible avec la spécification USB 2.0.</TD></TR>
+        <TR><TD>*</TD><TD>Si ce produit ne fonctionne pas correctement lorsqu’il est branché sur un port USB 3.0, branchez-le sur un port USB 2.0.</TD></TR>
+        <TR><TD>*</TD><TD>Connecter le produit à un port USB 3.0 ne modifie en rien ses performances.</TD></TR>
+      </TABLE>
+    </DD>
+
+<BLOCKQUOTE><TABLE>
+  <TR><TD>*</TD><TD>Ce pilote ne peut être utilisé dans un environnement Windows virtuel tel que Hyper-V ou Virtual PC.</TD></TR>
+  <TR><TD>*</TD><TD>Les ordinateurs Mac fonctionnant avec Windows ne sont pas pris en charge.</TD></TR>
+</TABLE></BLOCKQUOTE>
+
+
+
+  <DT>Autre</DT>
+    <DD>Connexion Internet
+      <TABLE><TR><TD>*</TD><TD>Vous devez disposer d'une connexion Internet pour télécharger le pilote.</TD></TR></TABLE>
+    </DD>
+</DL>
+
+
+<H3><A name="anchor0040">Précautions et restrictions d'utilisation</A></H3>
+
+<UL>
+  <LI>Des coupures de son ou d'autres phénomènes indésirables pourront se produire si les performances et les spécifications de votre ordinateur sont inadéquates. Les types et les modes d’utilisation des applications que vous exploitez ont également une incidence sur les résultats obtenus.</LI>
+  <LI>Si l'ordinateur est démarré alors que le Roland RD est encore connecté à l'ordinateur et sous tension, le pilote peut ne pas être chargé correctement et il se peut que vous ne soyez pas en mesure d'utiliser le Roland RD. Dans ce cas, connectez le Roland RD à un autre port USB ou mettez le Roland RD sous tension après le démarrage de l'ordinateur.</LI>
+  <LI>Si le Roland RD ne fonctionne pas correctement lorsque l'ordinateur passe du mode &quot;Veille&quot; au mode de fonctionnement normal, fermez toutes les applications utilisant le Roland RD et mettez le Roland RD hors tension, puis sous tension à nouveau.</LI>
+  <LI>Si vous débranchez le câble USB puis rebranchez celui-ci alors que le Roland RD est en cours d’utilisation, ou si le Roland RD est mis hors tension, puis sous tension à nouveau, il est possible que l'appareil cesse de fonctionner normalement. Dans ce cas, quittez toutes les applications utilisant le Roland RD et mettez le Roland RD hors tension, puis sous tension à nouveau.</LI>
+  <LI>Si votre ordinateur est soumis à une lourde charge de traitement, comme par exemple durant l’accès au lecteur CD-ROM ou au réseau alors que le Roland RD est en cours d’utilisation, le Roland RD peut cesser de fonctionner normalement. Dans ce cas, arrêtez dans un premier temps la lecture ou l’enregistrement, puis lancez à nouveau la lecture ou l’enregistrement. Si vous êtes toujours dans l’incapacité de démarrer la lecture ou l’enregistrement, fermez tous les programmes utilisant le Roland RD, mettez le Roland RD hors tension, puis à nouveau sous tension.</LI>
+</UL>
+
+
+<HR>
+
+
+<H2><A name="anchor0100">Installation</A></H2>
+
+<TABLE>
+	
+
+
+  <TR><TD>*</TD><TD>Pour réinstaller ou mettre à jour le pilote, reportez-vous au chapitre &quot;<A href="#anchor0400">Réinstaller le pilote</A>&quot;.</TD></TR>
+</TABLE>
+
+<OL>
+  <LI class="OL">Débranchez tous les périphériques USB à l'exception du clavier et de la souris, puis démarrez Windows.</LI>
+  <LI class="OL">Vérifiez que l'ordinateur est connecté à Internet.</LI>
+  <LI class="OL">Sous Windows, fermez l'écran des paramètres &quot;Son&quot; du Panneau de configuration et toutes les applications en cours d'exécution.</LI>
+  <LI class="OL">
+    Mettez l'appareil Roland RD sous tension et raccordez-le à l'ordinateur au moyen d'un câble USB.
+	<BR>
+    Le pilote sera automatiquement installé.</LI>
+  <LI class="OL">Après quelques minutes, cliquez sur le bouton Démarrer puis cliquez sur &quot;Toutes les applications&quot;.<BR>Ouvrez le dossier Roland. Si l'icône &quot;Roland RD&quot; s'affiche, l'installation est terminée.</LI>
+    <TABLE>
+    <TR><TD>*</TD><TD>En règle générale, l'installation du pilote s'effectue en quelques minutes.Elle peut nécessiter 10 minutes environ selon la connectivité Internet ou dans le cas où d'autres pilotes sont en cours d'installation pour d'autres périphériques.</TD></TR>
+    <TR><TD>*</TD><TD>Il se peut qu'un problème se soit produit si l'appareil Roland RD est connecté mais ne peut pas être utilisé après un délai de 10 minutes.Voir &quot;<A href="#anchor0600">Dysfonctionnements</A>&quot;.</TD></TR>
+    </TABLE>
+</OL>
+
+<HR>
+
+
+<H2><A name="anchor0200">Avant de commencer</A></H2>
+
+
+<H3><A name="anchor0220">Choix des périphériques d’entrée/sortie dans votre application</A></H3>
+
+<P>Dans l’application que vous comptez exécuter, spécifiez le périphérique MIDI devant être utilisé. (Pour les détails sur les modalités de réglage, reportez-vous au mode d’emploi de l’application concernée.)</P>
+
+<TABLE>
+  <TR><TD>*</TD><TD>Si vous n'arrivez pas à sélectionner le périphérique Roland RD, reportez-vous au chapitre &quot;<A href="#anchor0600">Dysfonctionnements</A>&quot;.</TD></TR>
+</TABLE>
+
+
+<H4>Périphériques d’entrée/sortie MIDI</H4>
+<TABLE><TR><TD>*</TD><TD>Dans Lecteur Windows Media, il est impossible d’utiliser les ports d’entrée/sortie MIDI du Roland RD.<BR>Veuillez sélectionner le périphérique suivant dans votre application compatible MIDI.</TD></TR></TABLE>
+
+<DL>
+<DT class="FN">[Périphériques MIDI OUT]</DT>
+		<DD>Roland RD</DD>
+	<DD>Roland RD MIDI OUT1</DD>
+	<DD>Roland RD MIDI OUT2</DD>
+	<DD>&nbsp;</DD>
+
+<DT class="FN">[Périphériques MIDI IN]</DT>
+		<DD>Roland RD</DD>
+	<DD>Roland RD MIDI IN
+	</DD>
+	<DD>&nbsp;</DD>
+
+</DL>
+
+
+<H3><A name="anchor0250">Ouverture d'un document en ligne</A></H3>
+Une fois l'installation du pilote terminé, vous pouvez ouvrir le fichier Readme (le présent document) en suivant la procédure décrite ci-dessous.<BR>Utilisez ce fichier pour le dépannage et pour vérifier la procédure d'installation du pilote.
+<OL>
+  <LI class="OL">Cliquez sur le bouton Démarrer puis sur &quot;Toutes les applications&quot;. </LI>
+  <LI class="OL">Ouvrez le dossier Roland puis cliquez sur &quot;Roland RD Readme&quot;.</LI>
+  <LI class="OL">Le document en ligne du pilote s'affiche.</LI>
+</OL>
+
+<HR>
+
+
+<H2><A name="anchor0300">Modification/vérification des paramètres du pilote</A></H2>
+
+<H3><A name="anchor0310">Modification/vérification des paramètres du pilote</A></H3>
+
+<OL>
+  <LI class="OL">Pour changer les réglages du pilote, assurez-vous d’abord de quitter toutes les applications utilisant le Roland RD. Ceci est inutile lors de la vérification des réglages.
+
+
+  </LI>
+
+  <LI class="OL">  Cliquez sur le bouton Démarrer puis sur &quot;Toutes les applications&quot;. </LI>
+<LI class="OL">
+  Ouvrez le dossier Roland puis cliquez sur &quot;Roland RD&quot;.
+
+  </LI>
+  <LI class="OL">La boîte de dialogue &quot;<B>Roland RD Paramètres du pilote</B>&quot; s’ouvre.
+    <TABLE><TR><TD>*</TD><TD>Vous pouvez également ouvrir la boîte de dialogue Roland RD Paramètres du pilote depuis le Panneau de configuration Windows.Sur le Panneau de configuration, cliquez sur Afficher par: et passez à l'affichage d'icônes, puis double-cliquez sur l'icône Roland RD.</TD></TR></TABLE>
+  </LI>
+  <LI class="OL">Pour modifier les réglages, effectuez les changements souhaités, puis cliquez sur [OK]. Pour simplement vérifier les réglages, assurez-vous de cliquer sur [Annuler] après avoir affiché les réglages.<TABLE><TR><TD>*</TD><TD>Pour plus d’informations sur les différents paramètres, reportez-vous au paragraphe &quot;<A href="#anchor0320">À propos des éléments de la boîte de dialogue Paramètres du pilote</A>&quot;.</TD></TR></TABLE></LI>
+</OL>
+
+<H3><A name="anchor0320">À propos des éléments de la boîte de dialogue Paramètres du pilote</A></H3>
+
+<DL>
+
+
+  <DT>Option &quot;Charge légère&quot;</DT>
+    <DD>Par défaut cette case n'est pas cochée.
+      <TABLE>
+        <TR><TD>*</TD><TD>La modification du réglage prend effet après avoir mis le Roland RD hors tension, puis sous tension à nouveau.</TD></TR>
+      </TABLE>
+    <DD>&nbsp;</DD>
+
+
+
+  <DT>Bouton &quot;Afficher Lisezmoi&quot;</DT>
+    <DD>Ce bouton permet d'afficher le fichier README (ce document).</DD>
+    <DD>&nbsp;</DD>
+
+  <DT>Information</DT>
+    <DD>Ce champ indique la version de pilote utilisée.</DD>
+
+</DL>
+
+
+
+<HR>
+
+
+<H2><A name="anchor0400">Réinstaller le pilote</A></H2>
+
+<OL>
+  <LI class="OL">Supprimez le pilote tel qu’indiqué au chapitre &quot;<A href="#anchor0500">Désinstallation du pilote</A>&quot;.
+    <TABLE>
+      <TR><TD>*</TD><TD>Lors de la désinstallation, les réglages de la boîte de dialogue Paramètres du pilote sont initialisés. Pour plus d’informations sur les différents paramètres, reportez-vous au paragraphe &quot;<A href="#anchor0320">À propos des éléments de la boîte de dialogue Paramètres du pilote</A>&quot;.</TD></TR>
+    </TABLE>
+  <LI class="OL">Installez le pilote tel qu’indiqué au chapitre &quot;<A href="#anchor0100">Installation</A>&quot;.</LI>
+</OL>
+
+
+<HR>
+
+
+<H2><A name="anchor0500">Désinstallation du pilote</A></H2>
+
+<OL>
+  <LI class="OL">Débranchez tous les périphériques USB à l'exception du clavier et de la souris, puis démarrez Windows.
+  <TABLE><TR><TD>*</TD><TD>Veillez également à retirer le câble USB de l'appareil Roland RD.</TD></TR></TABLE></LI>
+  <LI class="OL">Fermez toutes les applications avant d’effectuer la désinstallation.
+    <TABLE>
+	<TR><TD>*</TD><TD>Patientez environ 10 secondes jusqu'à ce que ces applications soient complètement fermées.</TD></TR>
+    </TABLE>
+  </LI>
+  <LI class="OL">Faites un clic droit sur le bouton Démarrer puis cliquez sur &quot;Programmes et fonctionnalités&quot;.</LI>
+  <LI class="OL">Dans la liste, choisissez le &quot;Pilote Roland RD&quot;, puis cliquez sur &quot;Désinstaller/Modifier&quot;.
+    <TABLE><TR><TD>*</TD><TD>Le pilote n'est pas installé si Pilote Roland RD n'apparaît pas dans la liste.Vous n'avez pas besoin de désinstaller le pilote.</TD></TR></TABLE>
+  </LI>
+  <LI class="OL">Si une boîte de dialogue relative à Contrôle de compte d'utilisateur s’ouvre, cliquez sur [Oui].
+    <TABLE><TR><TD>*</TD><TD>Si vous êtes invité à entrer le mot de passe d’un compte administrateur, connectez-vous à Windows en tant qu’Administrateur, puis lancez la désinstallation.</TD></TR></TABLE></LI>
+  <LI class="OL">L'écran affiche &quot;Le pilote Roland RD installé va être désinstallé&quot;. Cliquez sur [OK].</LI>
+  <LI class="OL">Lorsque le message &quot;La désinstallation est terminée.&quot; s’affiche, cliquez sur [OK] pour redémarrer  Windows.</LI>
+</OL>
+
+
+<HR>
+
+
+<H2><A name="anchor0600">Dysfonctionnements</A></H2>
+
+<H3><A name="anchor0660">Impossible d'installer le pilote</A></H3>
+<DL>
+<DT>Vérifiez l'état de l'appareil</DT>
+	<DD class="FS">En règle générale, l'installation du pilote s'effectue en quelques minutes.</DD>
+	<DD class="FS">Si l'appareil Roland RD est connecté mais ne peut pas être utilisé après un délai de 10 minutes, suivez la procédure ci-dessous et vérifiez l'état de l'appareil.</DD>
+	<OL class="FS">
+		<LI class="OL">
+		Mettez l'appareil Roland RD sous tension et raccordez-le à l'ordinateur au moyen d'un câble USB.
+		</LI>
+		<LI class="OL">Faites un clic droit sur le bouton Démarrer puis cliquez sur &quot;Gestionnaire de périphériques&quot;.</LI>
+		<LI class="OL">Dans le menu Affichage, cliquez sur &quot;Périphériques par type&quot;.</LI>
+		<LI class="OL">Cliquez sur &quot;Contrôleurs audio, vidéo et jeu&quot; ou &quot;Autres périphériques&quot; pour afficher l'appareil Roland RD.</LI>
+		<LI class="OL">Lorsque l'appareil Roland RD apparaît, double-cliquez dessus pour ouvrir l'écran &quot;Propriétés de l'appareil Roland RD&quot;.</LI>
+		<LI class="OL">Sous l'onglet Général, vérifiez le champ &quot;État du périphérique&quot;.</LI>
+	</OL>
+	<DD class="FS">Si le message est &quot;Ce périphérique fonctionne correctement.&quot; s'affiche dans ce champ, l'installation du pilote est terminée.</DD>
+	<DD class="FS">Sinon, il est possible que l'installation du pilote ait échoué.</DD>
+	<DD class="FS">Reportez-vous à d'autres rubriques dans Dysfonctionnements pour des informations sur les problèmes d'installation du pilote.</DD>
+	<DD class="FS">&nbsp;</DD>
+
+<DT>Votre ordinateur est-il connecté à Internet ?</DT>
+	<DD class="FS">Pour que vous puissiez installer ce pilote, votre ordinateur doit être connecté à Internet.</DD>
+	<DD class="FS">Vérifiez que votre ordinateur est connecté à Internet (par exemple en utilisant -*un navigateur Web), puis réinstallez le pilote suivant la procédure décrite dans la section &quot;<A href="#anchor0100">Installation</A>&quot;.</DD>
+	<DD class="FS">&nbsp;</DD>
+
+<DT>Reconnectez l'appareil Roland RD</DT>
+	<DD class="FS">Il est possible que l'identification de l'appareil ait échoué.</DD>
+	<DD class="FS">Débranchez le câble USB de l'appareil Roland RD, mettez l'appareil Roland RD hors tension puis à nouveau sous tension, puis reconnectez-le à votre ordinateur.</DD>
+	<DD class="FS">&nbsp;</DD>
+
+<DT>Installation manuelle du pilote</DT>
+	<DD class="FS">Selon la connectivité Internet, l'installation automatique du pilote peut ne pas fonctionner.</DD>
+	<DD class="FS">Dans ce cas, suivez la procédure ci-dessous pour installer le pilote.</DD>
+	<OL class="FS">
+		<LI class="OL">
+		Mettez l'appareil Roland RD sous tension et raccordez-le à l'ordinateur au moyen d'un câble USB.
+		</LI>
+		<LI class="OL">Faites un clic droit sur le bouton Démarrer puis cliquez sur &quot;Gestionnaire de périphériques&quot;.</LI>
+		<LI class="OL">Dans le menu Affichage, cliquez sur &quot;Périphériques par type&quot;.</LI>
+		<LI class="OL">Cliquez sur &quot;Contrôleurs audio, vidéo et jeu&quot; ou &quot;Autres périphériques&quot; pour afficher l'appareil Roland RD.</LI>
+		<LI class="OL">Lorsque l'appareil Roland RD apparaît, faites un clic droit dessus, puis sélectionnez &quot;Mettre à jour le pilote&quot;.</LI>
+		<LI class="OL">Sélectionnez &quot;Rechercher automatiquement un pilote mis à jour&quot;.<BR>Votre ordinateur se met à rechercher le pilote, et le pilote est installé automatiquement.</LI>
+	</OL>
+	<DD class="FS">L'installation est terminée si le message &quot;Windows a mis à jour votre pilote.&quot; s'affiche. Cliquez sur &quot;Fermer&quot;.</DD>
+	<DD class="FS">Si la boîte de dialogue &quot;Modification des paramètres système&quot; s’affiche, cliquez sur [Oui] pour redémarrer  Windows.</DD>
+	<DD class="FS">&nbsp;</DD>
+</DL>
+<DL>
+
+
+
+
+
+</DL>
+
+<H3><A name="anchor0620">Impossible de sélectionner ou d’utiliser le périphérique Roland RD</A></H3>
+
+<DL>
+<DT><A name="anchor0621">Le pilote a-t-il été installé correctement ?</A></DT>
+	<DD class="FS">Il est possible que le pilote n'ait pas été correctement installé.Voir la section &quot;<A href="#anchor0660">Impossible d'installer le pilote</A>&quot;.</DD>
+	<DD class="FS">Si vous ne pouvez pas utiliser le Roland RD après l'installation du pilote, réinstallez le pilote en suivant la procédure décrite dans la section &quot;<A href="#anchor0400">Réinstaller le pilote</A>&quot;.</DD>
+	<DD>&nbsp;</DD>
+
+<DT><A name="anchor0622">Le Roland RD est-il utilisé par un autre logiciel ?</A></DT>
+	<DD class="FS">	Fermez toutes les applications utilisant le Roland RD et mettez le Roland RD hors tension, puis sous tension à nouveau.<BR>Si ceci ne résout pas le problème, suivez la procédure décrite au chapitre &quot;<A href="#anchor0400">Réinstaller le pilote</A>&quot; afin de réinstaller le pilote.</DD>
+	<DD>&nbsp;</DD>
+
+<DT>Le nom du périphérique MIDI du Roland RD est-il affiché ?</DT>
+	<DD class="FS">	Si le nom du périphérique ne s’affiche pas, fermez toutes les applications utilisant le Roland RD et mettez le Roland RD hors tension, puis sous tension à nouveau.<BR>Si ceci ne résout pas le problème, suivez la procédure décrite au chapitre &quot;<A href="#anchor0400">Réinstaller le pilote</A>&quot; afin de réinstaller le pilote.</DD>
+	<DD>&nbsp;</DD>
+
+<DT>		L'ordinateur est-il passé en mode &quot;Veille&quot; alors que le Roland RD est connecté et sous tension ?</DT>
+	<DD class="FS">	Si le Roland RD ne fonctionne pas correctement lorsque l'ordinateur passe du mode &quot;Veille&quot; au mode de fonctionnement normal, fermez toutes les applications utilisant le Roland RD et mettez le Roland RD hors tension, puis sous tension à nouveau.</DD>
+	<DD>&nbsp;</DD>
+
+<DT>		Le câble USB a-t-il été débranché, puis rebranché alors que le Roland RD était en cours d’utilisation ou le Roland RD a-t-il été mis hors tension, puis sous tension à nouveau ?</DT>
+	<DD class="FS">	Si vous débranchez le câble USB, puis rebranchez celui-ci alors que le Roland RD est en cours d’utilisation, ou si le Roland RD est mis hors tension, puis sous tension à nouveau, il risque de ne plus fonctionner normalement. Si ceci se produit, fermez toutes les applications utilisant le Roland RD et mettez le Roland RD hors tension, puis sous tension à nouveau.</DD>
+	<DD>&nbsp;</DD>
+
+<DT>		Si l'ordinateur est démarré alors que le Roland RD est encore connecté à l'ordinateur et sous tension, le pilote peut ne pas être chargé correctement et il se peut que vous ne soyez pas en mesure d'utiliser le Roland RD.</DT>
+	<DD class="FS">	Dans ce cas, connectez le Roland RD à un autre port USB ou mettez le Roland RD sous tension après le démarrage de l'ordinateur.</DD>
+	<DD>&nbsp;</DD>
+</DL>
+
+
+<H3><A name="anchor0625">Un chiffre tel que &quot;2-&quot; a été ajouté au début du nom du périphérique</A></H3>
+<DL>
+<DT>Avez-vous connecté le Roland RD à un autre port USB ?</DT>
+	<DD class="FS">Si vous connectez le Roland RD à un autre port USB, le système d’exploitation peut ajouter automatiquement un numéro au début du nom du périphérique.<BR>Cela n’entraîne aucun problème de fonctionnement du Roland RD.
+    <TABLE><TR><TD>*</TD><TD>Pour rétablir le nom d’origine du périphérique et lui ôter ce numéro ajouté, connectez le Roland RD au même port USB que vous avez utilisé lors de sa première installation, ou réinstallez le pilote tel qu’indiqué sous &quot;<A href="#anchor0400">Réinstaller le pilote</A>&quot;.</TD></TR></TABLE>
+</DL>
+
+
+<H3><A name="anchor0630">Aucun son ne sort. Impossible de lire ou d’enregistrer</A></H3>
+<DL>
+  <DT><A href="#anchor0621">Le pilote a-t-il été installé correctement ?</A></DT>
+    <DD>&nbsp;</DD>
+
+  <DT><A href="#anchor0622">Le Roland RD est-il utilisé par un autre logiciel ?</A></DT>
+    <DD>&nbsp;</DD>
+
+<DT>Avez-vous effectué les réglages indiqués au chapitre &quot;Avant de commencer&quot; de façon à ce que le pilote Roland RD puisse être utilisé dans de bonnes conditions ?</DT>
+    <DD class="FS">Vous ne serez pas en mesure d’utiliser le Roland RD  dans de bonnes conditions à moins de procéder à ces réglages. Reportez-vous aux différentes sections du chapitre &quot;<A href="#anchor0200">Avant de commencer</A>&quot;.</DD>
+    <DD>&nbsp;</DD>
+
+
+<DT>Êtes-vous passé en mode &quot;Veille&quot; en cours de lecture ou d'enregistrement ?</DT>
+	<DD class="FS">	Si le Roland RD ne fonctionne pas correctement lorsque l'ordinateur passe du mode &quot;Veille&quot; au mode de fonctionnement normal, fermez toutes les applications utilisant le Roland RD et mettez le Roland RD hors tension, puis sous tension à nouveau.</DD>
+	<DD>&nbsp;</DD>
+
+<DT>		Durant la lecture ou l’enregistrement, avez-vous mis le Roland RD sous tension, puis hors tension ou avez-vous débranché, puis rebranché le câble USB ?</DT>
+	<DD class="FS">	Si vous déconnectez et reconnectez le câble USB en cours de lecture ou d’enregistrement, le Roland RD ne sera pas capable de reprendre la lecture ou l'enregistrement. Arrêtez la lecture ou l’enregistrement, puis relancez l’une ou l’autre de ces opérations. Si vous êtes toujours dans l’incapacité de reprendre la lecture ou l’enregistrement, fermez tous les programmes utilisant le Roland RD, puis déconnectez et reconnectez le câble USB du Roland RD.</DD>
+    <DD>&nbsp;</DD>
+
+
+
+</DL>
+
+<H3><A name="anchor0640">La lecture est en partie incorrecte : par ex., les notes s’interrompent prématurément ou certaines notes se perdent.</A></H3>
+<P><FONT size="-1">Il est possible de corriger ce type de problème en réglant les paramètres indiqués ci-dessous.</FONT></P>
+
+<DL>
+
+<DT>Essayez de mettre à jour le pilote de votre carte graphique</A></DT>
+	<DD class="FS">Il est possible d'éliminer les clics et autres bruits en mettant à jour le pilote de la carte graphique installée sur votre ordinateur.</DD>
+	<DD>&nbsp;</DD>
+
+<DT>Windows Update / Microsoft Update</A></DT>
+	<DD class="FS">Vous pouvez résoudre le problème en mettant à jour votre système grâce aux « Windows Update » ou « Microsoft Update » fournies par Microsoft.</DD>
+	<DD>&nbsp;</DD>
+
+<DT>Vérifiez les paramètres de gestion de l'alimentation</DT>
+	<DD><OL class="FS">
+		<LI class="OL">Ouvrez &quot;Panneau de configuration&quot; et cliquez sur &quot;Système et sécurité&quot;, puis sur &quot;Options d'alimentation&quot;.
+			<TABLE><TR><TD>*</TD><TD>Si l'affichage par icônes est sélectionné dans le Panneau de configuration, cliquez sur &quot;Options d'alimentation.&quot;</TD></TR></TABLE>
+		<LI class="OL">Dans &quot;Choisir ou personnaliser un mode de gestion de l’alimentation&quot;, sélectionnez &quot;Performances élevées&quot;.
+			<TABLE><TR><TD>*</TD><TD>Si le mode &quot;Performances élevées&quot; n'apparaît pas, cliquez sur &quot;Afficher les modes supplémentaires.&quot;</TD></TR></TABLE>
+		<LI class="OL">Dans la zone Performances élevées, cliquez sur &quot;Modifier les paramètres du mode&quot;.</LI>
+		<LI class="OL">Cliquez sur &quot;Modifier les paramètres d’alimentation avancés&quot;.</LI>
+		<LI class="OL">Dans les Paramètres avancés, cliquez sur le symbole « + » de &quot;Disque dur&quot;, puis sur le symbole « + » de &quot;Arrêter le disque dur après&quot; pour ouvrir l'arborescence.</LI>
+		<LI class="OL">Cliquez sur &quot;Paramètres (Minutes)&quot;, puis cliquez sur la flèche vers le bas pour sélectionner le paramètre &quot;Jamais&quot;.</LI>
+		<LI class="OL">Cliquez sur [OK] pour fermer la fenêtre Options d'alimentation.</LI>
+		<LI class="OL">Fermez le panneau &quot;Modifier les paramètres du mode de gestion de l’alimentation&quot;.</LI>
+	</OL>
+
+<DT>Réglage des &quot;Options de performances&quot; des propriétés de Système</DT>
+	<DD><OL class="FS">
+		<LI class="OL">Ouvrez &quot;Panneau de configuration&quot; et cliquez sur &quot;Système et sécurité&quot;, puis sur &quot;Système&quot;.
+			<TABLE><TR><TD>*</TD><TD>Si l'affichage par icônes est sélectionné dans le Panneau de configuration, cliquez sur &quot;Système.&quot;</TD></TR></TABLE>
+		<LI class="OL">Sur la gauche, cliquez sur &quot;Paramètres système avancés.&quot;</LI>
+		<LI class="OL">Si une boîte de dialogue relative à Contrôle de compte d'utilisateur s’ouvre, cliquez sur [Oui].
+			<TABLE><TR><TD>*</TD><TD>Si vous êtes invité à entrer le mot de passe d’un compte administrateur, connectez-vous à Windows en tant qu'Administrateur.</TD></TR></TABLE>
+		<LI class="OL">Cliquez d’abord sur [Paramètres] dans la section Performances, puis sur l’onglet [Avancé].</li>
+		<LI class="OL">Sélectionnez &quot;Les services d’arrière-plan&quot; et cliquez sur [OK].</LI>
+		<LI class="OL">Cliquez sur [OK] pour fermer &quot;Propriétés système&quot;.</LI>
+	</OL>
+
+
+<DT>Activez l'option &quot;Charge légère&quot; de la boîte de dialogue Paramètres du pilote.</DT>
+    <DD class="FS">Pour modifier ou vérifier les réglages, suivez la procédure décrite au chapitre &quot;<A href="#anchor0300">Modification/vérification des paramètres du pilote</A>&quot;.
+      <TABLE><TR><TD>*</TD><TD>La modification du réglage prend effet après avoir mis le Roland RD hors tension, puis sous tension à nouveau. À moins de rencontrer des problèmes, utilisez le réglage (initial) non coché.</TD></TR></TABLE>
+</DL>
+
+<HR>
+
+<P>Copyright (C) 2015 Roland Corporation. Tous droits réservés.</P>
+
+</BODY>
+</HTML>
