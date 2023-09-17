@@ -20,7 +20,7 @@ def create_instrument_files(audio_files_dir, signal_files_dir, sample_rate=SAMPL
             output_file = os.path.join(signal_files_dir, f)
             print(f"- processing input file {input_file}.")
             signal = librosa.load(input_file, sr=sample_rate, duration=duration, mono=True)[0]
-            norm_signal = normalise(signal)
+            norm_signal = normalise(signal, max=1, min=-1)
             sf.write(output_file, norm_signal, sample_rate)
 
 def create_mix_files(audio_files_dir, inst1, inst2, sample_rate=SAMPLE_RATE, duration=DURATION) :
@@ -48,10 +48,10 @@ def create_mix_files(audio_files_dir, inst1, inst2, sample_rate=SAMPLE_RATE, dur
             y_signal = librosa.load(y_path, sr=sample_rate, duration=duration, mono=True)[0]
             y_name = y.split('.')[0]
             mix_file_name = "mix_" + x_name + "_" + y_name + ".wav"
-            norm_signal = normalise(x_signal + y_signal)
+            mix_signal = (x_signal + y_signal)
             mix_file_path = os.path.join(audio_files_dir, mix_file_name)
             print(f"- processing input file {mix_file_path}")
-            sf.write(mix_file_path, norm_signal, sample_rate)     
+            sf.write(mix_file_path, mix_signal, sample_rate)     
 
 if __name__ == "__main__":
     DATASET_DIR = "./data/fnn_run"
@@ -69,5 +69,5 @@ if __name__ == "__main__":
         instrument_path = os.path.join(INSTRUMENT_DIR, instrument)
         create_instrument_files(instrument_path, SIGNAL_SAVE_DIR, sample_rate=SAMPLE_RATE, duration=DURATION)
 
-    create_mix_files(SIGNAL_SAVE_DIR, "piano", "violin", sample_rate=SAMPLE_RATE)
+    #create_mix_files(SIGNAL_SAVE_DIR, "piano", "violin", sample_rate=SAMPLE_RATE)
                     
