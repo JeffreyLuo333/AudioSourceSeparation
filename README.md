@@ -6,7 +6,7 @@ Project details can be found here: [Audio Source Separation on GitHub](https://g
 
 For dataset creation, I merged my piano recordings with other violin sound sources. My initial approach utilizes the FNN model, focusing on training with the sound wave format. 
 
-- **Exploration with FNN (Feedfoward Neural Network) Model**: [Piano Sound Wave with FNN](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/PianoSoundWaveFNN.ipynb).
+- **Exploration with FNN (Feedforward Neural Network) Model**: [Piano Sound Wave with FNN](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/PianoSoundWaveFNN.ipynb).
 
 Additionally, I'm keen on evaluating the FNN model's performance with spectrograms. 
 
