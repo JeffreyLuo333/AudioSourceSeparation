@@ -8,12 +8,12 @@ For dataset creation, I merged my piano recordings with other violin sound sourc
 
 - **Exploration with FNN**: [Piano Sound Wave with FNN](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/PianoSoundWaveFNN.ipynb).
 
-[<img src="notebooks/PianoSoundWaveFNN/images/SoundWaveFNN.jpg" width="400" height="200">](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/PianoSoundWaveFNN.ipynb)
+    [<img src="notebooks/PianoSoundWaveFNN/images/SoundWaveFNN.jpg" width="400" height="200">](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/PianoSoundWaveFNN.ipynb)
 
 Additionally, I'm keen on evaluating the FNN model's performance with spectrograms. 
 
 - **Preliminary Work on Conversion**: [Wave to Spectrogram Conversion](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/WaveSpectrogramConversion.ipynb).
 
-[<img src="notebooks/WaveSpectrogramConversion/images/WaveSpectrogramConversion.jpg" width="400" height="200">](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/WaveSpectrogramConversion.ipynb)
+    [<img src="notebooks/WaveSpectrogramConversion/images/WaveSpectrogramConversion.jpg" width="400" height="200">](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/WaveSpectrogramConversion.ipynb)
 
 Moving forward, I plan to use spectrograms as training data to gauge the results further.
