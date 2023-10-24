@@ -1,6 +1,6 @@
 # Audio Source Separation
 
-<img src="images/AudioSourceSeperation.jpg" width="400" height="200"> 
+<img src="images/AudioSourceSeperation.png" width="500" height="250"> 
 
 Audio Source Separation involves distinguishing a composite sound (e.g., a concerto) into its individual components (e.g., just the lead vocals). In my current project, I aim to delve into audio signal representation and investigate the potential of using AI models for sound separation. 
 
