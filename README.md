@@ -23,15 +23,15 @@ I focused on training the model in the sound wave format. My Google Colab notebo
 
 The initial experimentation saw unsatisfactory results. Sounds from one source often "bleed" into the track of another, leading to a lack of clarity. 
 
-### Preliminary work on wave-to-spectrogram conversion
-Hence I am keen on evaluating the FNN model's performance with spectrograms. The first step involves transforming audio from wave format into spectrogram representations.
+### Initial work on wave-to-spectrogram conversion
+I am keen on evaluating the FNN model's performance with spectrograms. The first step involves transforming audio from wave format into spectrogram representations.
 
 My Google Colab notebook can be found at [Wave to Spectrogram Conversion](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/WaveSpectrogramConversion.ipynb).
 
 [<img src="notebooks/WaveSpectrogramConversion/images/WaveSpectrogramConversion.jpg" width="400" height="200">](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/WaveSpectrogramConversion.ipynb)
 
 ### Next steps
-Moving forward, I plan to employ spectrograms as the training data to further evaluate the outcomes.
+Once I refine the conversion algorithm to achieve satisfactory results, my next step will be to employ spectrograms as the training data to further evaluate the source separation outcomes.
 
 As I start gaining more knowledge on AI, I also plan to invesigate different types of AI models. According to the literature, while FNNs can be used for audio source separation, they are often outperformed by more sophisticated architectures such as Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs), especially Long Short-Term Memory (LSTM) networks. These architectures can capture spatial and temporal dependencies, respectively, which are very important in audio signals.
 
