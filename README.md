@@ -21,7 +21,7 @@ I focused on training the model in the sound wave format. My Google Colab notebo
 
 [<img src="notebooks/PianoSoundWaveFNN/images/SoundWaveFNN.jpg" width="400" height="200">](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/PianoSoundWaveFNN.ipynb)
 
-The initial experimentation saw unsatisfactory results. Sounds from one source often "bleed" into the track of another, leading to a lack of clarity. 
+After running the notebook, you will be able to listen to the separated soundtracks at the end of the notebook. The initial experimentation saw unsatisfactory results. Sounds from one source often "bleed" into the track of another, leading to a lack of clarity. 
 
 ### 3.2 Initial work on wave-to-spectrogram conversion
 I am keen on evaluating the FNN model's performance with spectrograms. The first step involves transforming audio from wave format into spectrogram representations.
