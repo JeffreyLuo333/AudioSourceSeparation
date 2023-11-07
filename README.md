@@ -17,7 +17,7 @@ Considering my novice status in the AI field, I opted to begin my exploration wi
 To create the training dataset, I merged my piano recordings with a violin soundtrack. 
 
 ### 3.1 Initial Exploration Using FNN
-I focused on training the model in the sound wave format. My Google Colab notebook can be found at[Piano Sound Wave with FNN](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/PianoSoundWaveFNN.ipynb).
+I focused on training the model in the sound wave format. My Google Colab notebook can be found at [Piano Sound Wave with FNN](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/PianoSoundWaveFNN.ipynb).
 
 [<img src="notebooks/PianoSoundWaveFNN/images/SoundWaveFNN.jpg" width="400" height="200">](https://github.com/JeffreyLuo333/Audio-Source-Separation/blob/main/notebooks/PianoSoundWaveFNN.ipynb)
 
