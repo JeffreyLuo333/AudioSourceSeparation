@@ -12,7 +12,7 @@ Audio source separation is a technique that involves disintegrating a composite 
 My project revolved around investigating different methods of representing audio signals (as the dataset for AI model) and evaluating the possibility of using AI models for sound separation.
 
 ## 3. Technology investigations
-Considering my novice status in the AI field, I opted to begin my exploration with a Feedforward Neural Network (FNN) model, drawn by its relative simplicity and ease of understanding. 
+Considering my novice status in the field of AI, I opted to begin my exploration with a Feedforward Neural Network (FNN) model, drawn by its relative simplicity and ease of understanding. 
 
 To create the training dataset, I merged my piano recordings with a violin soundtrack. 
 
