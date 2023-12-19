@@ -2,6 +2,8 @@
 
 <img src="images/AudioSourceSeperation.png" width="600" height="300"> 
 
+Links to all my other __`music technology projects`__ (electronic instruments, AI-powered music signal processing software etc.) are at [http://jeffreyluo.com/#mt](http://jeffreyluo.com/#mt).
+
 ## 1. Project context
 Audio source separation is a technique that involves disintegrating a composite sound, like a concerto, into its constituent elements, such as the tracks for piano and violin. Here are some typical use cases that I've found useful for my own music endeavors:
 - __Music Transcription__: Source separation can assist in the automatic transcription of music, where algorithms can more accurately transcribe notes from isolated sources than from mixed music.
